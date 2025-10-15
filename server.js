@@ -5,6 +5,9 @@ const dotenv= require("dotenv");
 dotenv.config();
 const connectDB = require("./data/db");
 connectDB();
+const cors =require("cors");
+app.use(cors());
+
 
 const userRoute = require("./router/userRoutes");
 const AuthRoute = require("./router/AuthRoute");
